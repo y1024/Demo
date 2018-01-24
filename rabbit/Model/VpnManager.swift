@@ -152,7 +152,7 @@ extension VpnManager{
         }
     }
     
-    func disconnect(){
+    func disconnect() {
         loadProviderManager{$0?.connection.stopVPNTunnel()}
     }
 }
@@ -168,7 +168,7 @@ extension VpnManager{
     
     fileprivate func setRulerConfig(_ manager:NETunnelProviderManager){
         var conf = [String:AnyObject]()
-        conf["ss_address"] = "13.112.118.37" as AnyObject?
+      conf["ss_address"] = "13.230.124.120" as AnyObject?
         conf["ss_port"] = 8388 as AnyObject?
         conf["ss_method"] = "AES256CFB" as AnyObject? // 大写 没有横杠 看Extension中的枚举类设定 否则引发fatal error
         conf["ss_password"] = "829578138" as AnyObject?
