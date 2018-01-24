@@ -28,8 +28,8 @@
 		353C0FE11DDF393F00A46EBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 353C0FDF1DDF393F00A46EBD /* Main.storyboard */; };
 		353C0FE31DDF393F00A46EBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 353C0FE21DDF393F00A46EBD /* Assets.xcassets */; };
 		353C0FE61DDF393F00A46EBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 353C0FE41DDF393F00A46EBD /* LaunchScreen.storyboard */; };
-		7AC3D8881FDD4097007505D3 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC3D8871FDD4097007505D3 /* NetworkExtension.framework */; };
-		7AC3D8891FDD4204007505D3 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC3D8871FDD4097007505D3 /* NetworkExtension.framework */; };
+		7A691D8420182F640041148D /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A691D8320182F640041148D /* NetworkExtension.framework */; };
+		7A691D8520182F8B0041148D /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A691D8320182F640041148D /* NetworkExtension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,7 +93,7 @@
 		353C0FE21DDF393F00A46EBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		353C0FE51DDF393F00A46EBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		353C0FE71DDF393F00A46EBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7AC3D8871FDD4097007505D3 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		7A691D8320182F640041148D /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +108,7 @@
 				09549AE01DDF406B000F198C /* lwip.framework in Frameworks */,
 				09549AE11DDF406B000F198C /* MMDB.framework in Frameworks */,
 				09549AE21DDF406B000F198C /* NEKit.framework in Frameworks */,
-				7AC3D8881FDD4097007505D3 /* NetworkExtension.framework in Frameworks */,
+				7A691D8420182F640041148D /* NetworkExtension.framework in Frameworks */,
 				09549AE31DDF406B000F198C /* Sodium.framework in Frameworks */,
 				09549AE41DDF406B000F198C /* tun2socks.framework in Frameworks */,
 				09549AE51DDF406B000F198C /* Yaml.framework in Frameworks */,
@@ -119,7 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AC3D8891FDD4204007505D3 /* NetworkExtension.framework in Frameworks */,
+				7A691D8520182F8B0041148D /* NetworkExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,7 +191,7 @@
 		09549ACD1DDF3C0E000F198C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7AC3D8871FDD4097007505D3 /* NetworkExtension.framework */,
+				7A691D8320182F640041148D /* NetworkExtension.framework */,
 				09E3FB5A1DF859E0001DE158 /* Resolver.framework */,
 				09549AD21DDF406B000F198C /* CocoaAsyncSocket.framework */,
 				09549AD31DDF406B000F198C /* CocoaLumberjack.framework */,
@@ -302,7 +302,7 @@
 				TargetAttributes = {
 					09549ABE1DDF3B49000F198C = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = GE35PAF7XQ;
+						DevelopmentTeam = 5NKJT58L7D;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -319,10 +319,16 @@
 					};
 					353C0FD71DDF393F00A46EBD = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = GE35PAF7XQ;
+						DevelopmentTeam = 5NKJT58L7D;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.NetworkExtensions.iOS = {
+								enabled = 1;
+							};
 							com.apple.VPNLite = {
 								enabled = 1;
 							};
@@ -469,7 +475,7 @@
 				CODE_SIGN_ENTITLEMENTS = PacketTunnel/PacketTunnel.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GE35PAF7XQ;
+				DEVELOPMENT_TEAM = 5NKJT58L7D;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -477,7 +483,7 @@
 				INFOPLIST_FILE = PacketTunnel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.w2fzu.rabbit3.PacketTunnel3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.w2fzu.rabbit5.PacketTunnel3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -496,7 +502,7 @@
 				CODE_SIGN_ENTITLEMENTS = PacketTunnel/PacketTunnel.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GE35PAF7XQ;
+				DEVELOPMENT_TEAM = 5NKJT58L7D;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -504,7 +510,7 @@
 				INFOPLIST_FILE = PacketTunnel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.w2fzu.rabbit3.PacketTunnel3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.w2fzu.rabbit5.PacketTunnel3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -611,10 +617,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = rabbit/rabbit.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = GE35PAF7XQ;
+				DEVELOPMENT_TEAM = 5NKJT58L7D;
 				INFOPLIST_FILE = rabbit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.w2fzu.rabbit3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.w2fzu.rabbit5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -629,10 +635,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = rabbit/rabbit.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = GE35PAF7XQ;
+				DEVELOPMENT_TEAM = 5NKJT58L7D;
 				INFOPLIST_FILE = rabbit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.w2fzu.rabbit3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.w2fzu.rabbit5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
